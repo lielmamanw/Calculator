@@ -1,0 +1,45 @@
+.home-screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-background {
+    border-radius: 2rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem 4rem;
+}
+
+.calculator-screen {
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border-radius: 1.5rem;
+    padding: .5rem 2rem;
+    margin-bottom: .5rem;
+}
+
+.calculator-screen > * {
+    margin: 0;
+}
+
+.exercise-result {
+    font-size: 1.4rem;
+}
+
+.calculator-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.line {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: .5rem;
+}
