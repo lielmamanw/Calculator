@@ -10,10 +10,17 @@ export class CalculationService {
   constructor() { }
 
   public calculateExercise(expression: string): string {
-    debugger;
+    let postfixExpression: string[];
+    let result: string;
+
     expression = expression.slice(0, expression.length - 1);
-    let postfixExpression: string[] = this.infixToPostfix(expression);
-    return this.solvePostfixExpression(postfixExpression);
+    postfixExpression = this.infixToPostfix(expression);
+    result = this.solvePostfixExpression(postfixExpression);
+
+    if(result.length > 10)
+      result = result.slice(0, 11);
+
+    return result;
   }
 
 
