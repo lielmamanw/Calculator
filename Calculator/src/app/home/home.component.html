@@ -1,0 +1,136 @@
+
+<div class="home-screen">
+    <div class="calculator-background"
+         [style.backgroundColor]="screenBackgroundColor">
+        <div class="calculator-screen"
+             [style.backgroundColor]="exerciseBackgroundcolor">
+            <p class="exercise-value">{{exercise}}</p>
+            <p class="exercise-result">{{exreciseResult}}</p>
+        </div>
+        <div class="calculator-buttons">
+            <div class="line line-1">
+                <modern-button id="clear-button"
+                               class="button del-operation-button"
+                               [buttonTitle]="deleteOperationButtonsTitles[0]"
+                               [backgroundColor]="deleteOperationButtonsBackgroundColors"
+                               (click)="clearExercise()">
+                </modern-button>
+                <modern-button id="delete-button"
+                               class="button del-operation-button"
+                               [buttonTitle]="deleteOperationButtonsTitles[1]"
+                               [backgroundColor]="deleteOperationButtonsBackgroundColors"
+                               (click)="deleteLastCharacter()">
+                </modern-button>
+            </div>
+    
+            <div class="line line-2">
+                <modern-button id="seven-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[7]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[7])">
+                </modern-button>
+                <modern-button id="eight-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[8]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[8])">
+                </modern-button>
+                <modern-button id="nine-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[9]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[9])">
+                </modern-button>
+                <modern-button id="division-operation-button"
+                               class="button operation-button"
+                               [buttonTitle]="operationButtonsTitles[0]"
+                               [backgroundColor]="operationButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(operationButtonsTitles[0])">
+                </modern-button>
+            </div>
+    
+            <div class="line line-3">
+                <modern-button id="four-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[4]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[4])">
+                </modern-button>
+                <modern-button id="five-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[5]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[5])">
+                </modern-button>
+                <modern-button id="six-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[6]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[6])">
+                </modern-button>
+                <modern-button id="multiplication-operation-button"
+                               class="button operation-button"
+                               [buttonTitle]="operationButtonsTitles[1]"
+                               [backgroundColor]="operationButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(operationButtonsTitles[1])">
+                </modern-button>
+            </div>
+    
+            <div class="line line-4">
+                <modern-button id="one-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[1]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[1])">
+                </modern-button>
+                <modern-button id="two-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[2]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[2])">
+                </modern-button>
+                <modern-button id="three-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[3]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[3])">
+                </modern-button>
+                <modern-button id="subtraction-operation-button"
+                               class="button operation-button"
+                               [buttonTitle]="operationButtonsTitles[2]"
+                               [backgroundColor]="operationButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(operationButtonsTitles[2])">
+                </modern-button>
+            </div>
+    
+            <div class="line line-5">
+                <modern-button id="equals-operation-button"
+                               class="button operation-button"
+                               [buttonTitle]="operationButtonsTitles[4]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(operationButtonsTitles[4])">
+                </modern-button>
+                <modern-button id="point-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[10]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[10])">
+                </modern-button>
+                <modern-button id="zero-digit-button"
+                               class="button digit-button"
+                               [buttonTitle]="digitButtonsTitles[0]"
+                               [backgroundColor]="digitButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(digitButtonsTitles[0])">
+                </modern-button>
+                <modern-button id="addition-operation-button"
+                               class="button operation-button"
+                               [buttonTitle]="operationButtonsTitles[3]"
+                               [backgroundColor]="operationButtonsBackgroundColors"
+                               (click)="addCharacterToExercise(operationButtonsTitles[3])">
+                </modern-button>
+            </div>
+        </div>
+    </div>
+</div>
+
