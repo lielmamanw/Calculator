@@ -51,6 +51,9 @@ export class HomeComponent {
        !this.characterIsApproved(characterToAdd)
     )
       return;
+
+      if(this.exreciseResult.length > 0)
+        this.clearExercise();
     
     this.exercise += characterToAdd;
     if(characterToAdd === this.operationButtonsTitles[4])
@@ -77,7 +80,10 @@ export class HomeComponent {
   }
 
   public clearExercise(): void {
-    this.exercise = '';
+    if (this.exreciseResult.length > 0)
+      this.exreciseResult = '';
+    if(this.exercise.length > 0)
+      this.exercise = '';
   }
 
   public deleteLastCharacter(): void {
