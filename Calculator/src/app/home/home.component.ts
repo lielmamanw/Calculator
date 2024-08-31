@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModernButtonComponent } from '../modern-button/modern-button.component';
+import { CalculationService } from '../Services/calculation.service';
 
 @Component({
   selector: 'home',
@@ -23,7 +24,9 @@ export class HomeComponent {
   
   public screenBackgroundColor: string;
 
-  constructor(){
+  constructor(
+    private readonly calculationService: CalculationService
+  ){
     this.exerciseBackgroundcolor = '#808080';
     this.digitButtonsBackgroundColors = '#2d302e';
     this.digitButtonsTitles =
@@ -51,8 +54,7 @@ export class HomeComponent {
     
     this.exercise += characterToAdd;
     if(characterToAdd === this.operationButtonsTitles[4])
-      console.log('Remove these log after the service exsists');
-      // here add the sending into the service for calculation
+      this.exreciseResult = this.calculationService.calculateExercise(this.exercise);
   }
 
   private characterIsApproved(characterToAdd: string): boolean {
