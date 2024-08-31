@@ -1,6 +1,4 @@
 .button-background {
-    width: fit-content;
-    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,4 +11,8 @@
 .button-background:hover {
     transform: scale(1.2);
     transition: 1s;
+}
+
+.button-title {
+    text-align: center;
 }
